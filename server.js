@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // connect with animalShelterDB
-mongoose.connect(uri);
+//mongoose.connect(uri);
 //mongoose.connect("mongodb://localhost:27017/animalShelterDB");
 const {
   MongoClient
