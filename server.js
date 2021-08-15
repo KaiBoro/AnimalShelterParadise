@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const pluralize = require("pluralize");
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -264,6 +265,6 @@ app.get("/FindOutMore/:animalID", function(req, res) {
     });
 });
 
-app.listen(3000, function() {
-  console.log("Server is running on port 3000.");
+app.listen(port, function() {
+  console.log("Server is running on port " + port + ".");
 });
