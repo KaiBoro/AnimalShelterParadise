@@ -1,0 +1,67 @@
+<%- include("partials/header") -%> <%- include("partials/navbar") -%>
+
+<section class="animalSection">
+  <div class="container">
+    <h1 class="text-center">Animals</h1>
+    <div class="mb-5 sticky-top bg-white p-4">
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item">
+          <a href="/Animals/cat"
+            ><img src="../images/cat.svg" alt="Cat" class="listIconCustom"
+          /></a>
+        </li>
+        <li class="list-group-item">
+          <a href="/Animals/dog"
+            ><img src="../images/dog.svg" alt="Dog" class="listIconCustom"
+          /></a>
+        </li>
+        <li class="list-group-item">
+          <a href="/Animals/rabbit"
+            ><img
+              src="../images/rabbit.svg"
+              alt="Rabbit"
+              class="listIconCustom"
+          /></a>
+        </li>
+        <li class="list-group-item">
+          <a href="/Animals/all"
+            ><img
+              src="../images/paws.png"
+              alt="All animals"
+              class="listIconCustom"
+          /></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <% if (animalArray.length === 0) { %>
+      <div class="text-center">
+        <p><%= emptyMessage %></p>
+      </div>
+      <% } else { %> <% animalArray.forEach(function(animal) { %>
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card mb-5 cardAnimal">
+          <img
+            src="../images/<%=animal.image%>"
+            class="card-img-top"
+            alt="<%=animal.image%>"
+          />
+          <div class="card-body">
+            <h5 class="card-title"><%=animal.name%></h5>
+            <p class="card-text">Age: <%=animal.age%> years</p>
+            <p class="card-text">
+              <%=animal.description.substring(0, 60) + " ..."%>
+            </p>
+            <a href="/FindOutMore/<%= animal._id %>" class="btn btn-success"
+              >Find out more</a
+            >
+          </div>
+        </div>
+      </div>
+      <% })} %>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer") -%>

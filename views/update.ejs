@@ -1,0 +1,127 @@
+<%- include("partials/header") -%> <%- include("partials/navbar") -%>
+
+<!-- Update section -->
+<section class="updateSection">
+  <div class="container w-75">
+    <div>
+      <h1 class="text-center">Update <%= animal.name %></h1>
+      <form action="/UpdateAnimal" method="post">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label for="inputName" class="col-sm-2 col-form-label"
+                >Name</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="animalName"
+                  class="form-control"
+                  id="inputName"
+                  placeholder="<%= animal.name %>"
+                  aria-label="Name of animal"
+                  value="<%=animal.name%>"
+                />
+              </div>
+            </div>
+
+            <fieldset class="form-group mt-4">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                    name="animalType" id="cat" value="cat" <% if (animal.type
+                    === "cat") { %> <%= "checked" %> <%} %>>
+                    <label class="form-check-label" for="cat"> Cat </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                    name="animalType" id="dog" value="dog" <% if (animal.type
+                    === "dog") { %> <%= "checked" %> <%} %>>
+                    <label class="form-check-label" for="dog"> Dog </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                    name="animalType" id="rabbit" value="rabbit" <% if
+                    (animal.type === "rabbit") { %> <%= "checked" %> <%} %>>
+                    <label class="form-check-label" for="rabbit">
+                      Rabbit
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group mt-4">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Age</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                    name="animalAge" id="gridRadios1" value="<1" <% if
+                    (animal.age === "<1") { %> <%= "checked" %> <%} %>>
+                    <label class="form-check-label" for="<1">
+                      younger than 1 year
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                    name="animalAge" id="1-10" value="1-10" <% if (animal.age
+                    === "1-10") { %> <%= "checked" %> <%} %>>
+                    <label class="form-check-label" for="1-10">
+                      between 1-10 years
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                    name="animalAge" id=">10" value=">10" <% if (animal.age ===
+                    ">10") { %> <%= "checked" %> <%} %>>
+                    <label class="form-check-label" for=">10">
+                      older than 10 years
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-floating mt-4">
+              <div class="input-group mb-4">
+                <input
+                  type="file"
+                  class="form-control"
+                  name="animalImage"
+                  value="<%= animal.image %>"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <div class="form-floating">
+              <textarea
+                class="form-control h-100"
+                name="animalDescription"
+                id="floatingTextarea"
+                rows="11"
+              >
+<%= animal.description %></textarea
+              >
+              <label for="floatingTextarea">Update describtion here.</label>
+            </div>
+          </div>
+        </div>
+
+        <input type="hidden" name="animalID" value="<%= animal._id %>" />
+
+        <div class="d-grid mt-4 mb-5">
+          <button type="submit" class="btn btn-secondary">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer") -%>

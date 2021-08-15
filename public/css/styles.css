@@ -1,0 +1,103 @@
+/* ------ BASIC SETUP ------ */
+html {
+  font-size: 93.75%;
+}
+
+section {
+  padding-top: 7rem;
+}
+
+.customCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ------ HOME SECTION ------ */
+.homeSection {
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/Title.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+
+.homeSection h1 {
+  font-size: 4rem;
+}
+
+/* Contact Section */
+.contactSection h1 {
+  margin-bottom: 40px;
+}
+
+/* About Section */
+.aboutSection h1,
+.addSection h1,
+.updateSection h1
+ {
+  margin-bottom: 40px;
+}
+
+.imageAbout {
+  width: 50rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.aboutSection hr {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.iconCustom {
+  height: 100px;
+  width: 100px;
+}
+
+.cardPerson {
+  max-width: 50rem;
+}
+
+/* Animal Section*/
+.animalSection .card {
+  margin: 0 auto;
+}
+
+.animalSection img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.listIconCustom {
+  max-height: 50px;
+  object-fit: scale-down;
+}
+
+.sticky-top {
+  top: 50px;
+}
+
+.cardAnimal {
+  width: 20rem;
+}
+
+/* Find out more */
+.imageFindOutMore {
+  height: 400px;
+}
+
+/* Messages */
+.iconMessage {
+  height: 20px;
+}
+
+/* Thank you*/
+.thankyouSection {
+  margin-bottom: 350px;
+}
+
+.updateSection {
+  margin-bottom: 275px;
+}

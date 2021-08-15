@@ -1,0 +1,34 @@
+<%- include("partials/header") -%> <%- include("partials/navbar") -%>
+
+<!-- FindOutMore section -->
+<section class="updateSection">
+  <div class="container w-75">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <img
+          class="mt-5 imageFindOutMore"
+          src="../images/<%=animal.image%>"
+          alt="<%= animal.image %>"
+        />
+      </div>
+      <div class="col-md-6 text-center text-md-start">
+        <h1><%= animal.name %></h1>
+        <h5>Age: <%= animal.age %> years</h5>
+        <h5>Type: <%= animal.type %></h5>
+        <h5>Description: <%= animal.description %></h5>
+        <a class="mt-5 btn btn-light" href="/Animals/<%= animal.type %>"
+          >Go back</a
+        >
+        <!-- Timify Booking Link -->
+        <div
+          class="timify-button btn btn-success mt-5"
+          data-account-id="60a119441243cb118d389fc1"
+        >
+          Book appointment to meet me
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer") -%>

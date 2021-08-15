@@ -1,0 +1,149 @@
+<%- include("partials/header") -%> <%- include("partials/navbar") -%>
+
+<!-- Add section -->
+<section class="addSection">
+  <div class="container w-75">
+    <div>
+      <h1 class="text-center">Add a new animal to the database</h1>
+      <form action="/Add" method="post">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label for="inputName" class="col-sm-2 col-form-label"
+                >Name</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="animalName"
+                  class="form-control"
+                  id="inputName"
+                  placeholder="Name of animal"
+                  aria-label="Name of animal"
+                />
+              </div>
+            </div>
+
+            <fieldset class="form-group mt-4">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="animalType"
+                      id="cat"
+                      value="cat"
+                    />
+                    <label class="form-check-label" for="cat"> Cat </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="animalType"
+                      id="dog"
+                      value="dog"
+                    />
+                    <label class="form-check-label" for="dog"> Dog </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="animalType"
+                      id="rabbit"
+                      value="rabbit"
+                    />
+                    <label class="form-check-label" for="rabbit">
+                      Rabbit
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group mt-4">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Age</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="animalAge"
+                      id="gridRadios1"
+                      value="<1"
+                    />
+                    <label class="form-check-label" for="<1">
+                      younger than 1 year
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="animalAge"
+                      id="gridRadios2"
+                      value="1-10"
+                    />
+                    <label class="form-check-label" for="1-10">
+                      between 1-10 years
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="animalAge"
+                      id="gridRadios3"
+                      value=">10"
+                    />
+                    <label class="form-check-label" for=">10">
+                      older than 10 years
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-floating mt-4">
+              <div class="input-group mb-4">
+                <input
+                  type="file"
+                  class="form-control"
+                  id="floatingAnimalImage"
+                  name="animalImage"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+
+          <div class="col-md-6">
+            <div class="form-floating">
+              <textarea
+                class="form-control h-100"
+                name="animalDescription"
+                id="floatingTextarea"
+                rows="11"
+              ></textarea>
+              <label for="floatingTextarea">Update describtion here.</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid mt-4 mb-5">
+          <button type="submit" class="btn btn-secondary">
+            Add to database
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer") -%>

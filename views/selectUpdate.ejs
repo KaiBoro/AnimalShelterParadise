@@ -1,0 +1,36 @@
+<%- include("partials/header") -%> <%- include("partials/navbar") -%>
+
+<!-- Update section -->
+<section class="updateSection">
+  <div class="container text-center w-75">
+    <div class="text-center">
+      <form action="/Update" method="post">
+        <h1>Select which animal entry you would like to update</h1>
+        <div class="row">
+          <div class="col">
+            <div class="form-floating">
+              <select
+                class="form-select"
+                id="floatingSelectAnimal"
+                name="selectedAnimal"
+              >
+                <option selected>Select...</option>
+                <% animalArray.forEach(function(animal) { %>
+                <option value="<%= animal._id %>"><%= animal.name %></option>
+                <% }) %>
+              </select>
+              <label for="floatingSelectAnimal">Select animal</label>
+            </div>
+            <div class="d-grid mt-4 mb-5">
+              <button type="submit" class="btn btn-secondary">
+                Go to update
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer") -%>

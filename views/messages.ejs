@@ -1,0 +1,49 @@
+<%- include("partials/header") -%> <%- include("partials/navbar") -%>
+
+<section>
+  <div class="container text-center">
+    <h1 class="mb-5 mt-5">Your messages</h1>
+    <div class="text-start">
+      <table class="table table-responsive table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Message</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% messageArray.forEach(function(message) { %> <% count++ %>
+          <tr>
+            <td><%= count %></td>
+            <td><%= message.fName %></td>
+            <td><%= message.lName %></td>
+            <td><%= message.email %></td>
+            <td><%= message.message %></td>
+            <td>
+              <a
+                href="mailto:<%=message.email%>?subject=Animal Shelter Paradise&body=Reply here: ...%0D%0A//%0D%0A<%=message.message%>"
+                ><img
+                  class="iconMessage"
+                  src="../images/reply.png"
+                  alt="replyButton"
+              /></a>
+              <a href="/DeleteMessage/<%=message._id%>"
+                ><img
+                  class="iconMessage"
+                  src="../images/delete.svg"
+                  alt="deleteButton"
+              /></a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer") -%>

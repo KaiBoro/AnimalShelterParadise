@@ -1,0 +1,71 @@
+<%- include("partials/header") -%> <%- include("partials/navbar") -%>
+
+<section class="contactSection">
+  <div class="container text-center w-75">
+    <h1>Contact us</h1>
+    <form action="/Contact" method="post">
+      <div class="row">
+        <div class="col">
+          <div class="form-floating">
+            <input
+              type="text"
+              name="fName"
+              class="form-control"
+              placeholder="First name"
+              aria-label="First name"
+              id="floatingFirstName"
+            />
+            <label for="floatingFirstName">First name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-floating">
+            <input
+              type="text"
+              name="lName"
+              class="form-control"
+              placeholder="Last name"
+              aria-label="Last name"
+              id="floatingLastName"
+            />
+            <label for="floatingLastName">Last name</label>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <div class="form-floating">
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="Email"
+              aria-label="email"
+              id="floatingEmail"
+            />
+            <label for="floatingEmail">Email</label>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <div class="form-floating">
+            <textarea
+              class="form-control h-100"
+              name="message"
+              placeholder="Your message"
+              id="floatingTextarea"
+              rows="7"
+            ></textarea>
+            <label for="floatingTextarea">Your message</label>
+          </div>
+        </div>
+      </div>
+      <div class="d-grid mt-4 mb-5">
+        <button type="submit" class="btn btn-secondary">Send</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/footer") -%>

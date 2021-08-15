@@ -1,0 +1,65 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top pull-right">
+  <div class="container">
+    <a class="navbar-brand">Animal Shelter Paradise</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseMenu"
+      aria-controls="collapseMenu"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapseMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item me-3">
+          <a class="nav-link mr-4" href="/">Home</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link mr-4" href="/About">About</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link mr-4" href="/Animals">Animals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Contact">Contact</a>
+        </li>
+        <!-- Dropdown to work with database internally -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            ⋮
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li><a class="dropdown-item text-secondary" href="/Add">Add</a></li>
+            <li>
+              <a class="dropdown-item text-secondary" href="/SelectUpdate"
+                >Update</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item text-secondary" href="/Delete">Delete</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item text-secondary" href="/CheckMessages"
+                >Check messages</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
