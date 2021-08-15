@@ -191,7 +191,7 @@ app.post("/Update", function(req, res) {
     _id: animalToUpdate
   }, function(err, entry) {
     if (!err) {
-      res.render("Update", {
+      res.render("update", {
         animal: entry
       });
     } else {
