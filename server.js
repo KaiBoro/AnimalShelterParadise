@@ -6,7 +6,7 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 const pluralize = require("pluralize");
 const port = process.env.PORT || 3000;
-const uri = process.env.MONGODB_URI;
+//const uri = process.env.MONGODB_URI;
 
 const app = express();
 
@@ -22,6 +22,19 @@ app.use(bodyParser.urlencoded({
 // connect with animalShelterDB
 mongoose.connect(uri);
 //mongoose.connect("mongodb://localhost:27017/animalShelterDB");
+const {
+  MongoClient
+} = require('mongodb');
+const uri = "mongodb+srv://KaiZa29:<password>@animalshelterparadise.a8dlh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 
 // create structure for animals collection in animalShelterDB
 const animalSchema = ({
