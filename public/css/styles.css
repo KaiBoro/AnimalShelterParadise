@@ -86,6 +86,7 @@ section {
 /* Find out more */
 .imageFindOutMore {
   height: 400px;
+  max-width: 100%;
 }
 
 /* Messages */
