@@ -6,6 +6,7 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 const pluralize = require("pluralize");
 const port = process.env.PORT || 3000;
+const uri = process.env.MONGODB_URI;
 
 const app = express();
 
@@ -19,7 +20,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 // connect with animalShelterDB
-mongoose.connect("mongodb://localhost:27017/animalShelterDB");
+mongoose.connect(uri);
+//mongoose.connect("mongodb://localhost:27017/animalShelterDB");
 
 // create structure for animals collection in animalShelterDB
 const animalSchema = ({
