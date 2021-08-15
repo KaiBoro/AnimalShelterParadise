@@ -51,7 +51,11 @@ app.get("/", function(req, res) {
 
 app.get("/About", function(req, res) {
   res.render("about");
-})
+});
+
+app.get("/Update", function(req, res) {
+  res.render("selectUpdate");
+});
 
 // show all animals from database
 app.get("/Animals", function(req, res) {
