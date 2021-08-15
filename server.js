@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 
 // connect with animalShelterDB
 //mongoose.connect(uri);
-mongoose.connect("mongodb://localhost:27017/animalShelterDB");
+mongoose.connect("mongodb+srv://KaiZa29:Glaucio29.@animalshelterparadise.a8dlh.mongodb.net/animalShelterDB?retryWrites=true&w=majority");
 
 // create structure for animals collection in animalShelterDB
 const animalSchema = ({
