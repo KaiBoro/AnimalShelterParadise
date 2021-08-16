@@ -3,25 +3,25 @@
 <!-- FindOutMore section -->
 <section class="updateSection">
   <div class="container w-75">
-    <div class="row">
-      <div class="col-md-6 text-center">
+    <div class="row mt-5">
+      <div class="col-md-6 text-start text-md-end">
         <img
-          class="mt-5 imageFindOutMore img-fluid"
+          class="imageFindOutMore img-fluid"
           src="../images/<%=animal.image%>"
           alt="<%= animal.image %>"
         />
       </div>
-      <div class="col-md-6 text-center text-md-start">
-        <h1><%= animal.name %></h1>
-        <h5>Age: <%= animal.age %> years</h5>
-        <h5>Type: <%= animal.type %></h5>
-        <h5>Description: <%= animal.description %></h5>
-        <a class="mt-5 btn btn-light" href="/Animals/<%= animal.type %>"
+      <div class="col-md-6 text-start">
+        <h1 class="mt-3 mt-sm-0><%= animal.name %></h1>
+        <p>Age: <%= animal.age %> years</p>
+        <p>Type: <%= animal.type %></p>
+        <p>Description: <%= animal.description %></p>
+        <a class="mt-2 mt-lg-5 btn btn-light" href="/Animals/<%= animal.type %>"
           >Go back</a
         >
         <!-- Timify Booking Link -->
         <div
-          class="timify-button btn btn-success mt-5"
+          class="timify-button btn btn-success mt-2 mt-lg-5"
           data-account-id="60a119441243cb118d389fc1"
         >
           Book appointment to meet me
